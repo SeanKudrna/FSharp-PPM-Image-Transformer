@@ -1,0 +1,81 @@
+#light
+
+
+
+
+
+namespace ImageLibrary
+  module Operations = begin
+    val tuple_traversed_grayscale :
+      pixleRowList:(int * int * int) list ->
+        newList:(int * int * int) list -> (int * int * int) list
+    val list_traversed_grayscale :
+      image:(int * int * int) list list ->
+        width:int ->
+          height:int ->
+            newImageList:(int * int * int) list list ->
+              (int * int * int) list list
+    val Grayscale :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val thresh_conversion : depth:int -> threshold:int -> value:int -> int
+    val tuple_traversed_threshold :
+      depth:int ->
+        threshold:int ->
+          pixleRowList:(int * int * int) list ->
+            newList:(int * int * int) list -> (int * int * int) list
+    val list_traversed_threshold :
+      image:(int * int * int) list list ->
+        depth:int ->
+          threshold:int ->
+            height:int ->
+              newImageList:(int * int * int) list list ->
+                (int * int * int) list list
+    val Threshold :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val list_traversed_horizontal :
+      image:(int * int * int) list list ->
+        width:int ->
+          height:int ->
+            newImageList:(int * int * int) list list ->
+              (int * int * int) list list
+    val FlipHorizontal :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+    val tuple_traversed_EdgeDetect :
+      pixleRowList:(int * int * int) list ->
+        newList:(int * int * int) list -> rowBelow:'a -> (int * int * int) list
+    val list_traversed_EdgeDetect :
+      image:(int * int * int) list list ->
+        width:int ->
+          height:int ->
+            newImageList:(int * int * int) list list ->
+              (int * int * int) list list
+    val EdgeDetect :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list ->
+              threshold:int -> (int * int * int) list list
+    val getHead : L:(int * int * int) list -> int * int * int
+    val getTail : L:'a list -> 'a list
+    val col_to_row :
+      width:int ->
+        image:(int * int * int) list list ->
+          newImageList:(int * int * int) list list ->
+            (int * int * int) list list
+    val RotateRight90 :
+      width:int ->
+        height:int ->
+          depth:int ->
+            image:(int * int * int) list list -> (int * int * int) list list
+  end
+
